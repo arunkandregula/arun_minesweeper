@@ -1,5 +1,4 @@
 module.exports = {
-    context: __dirname,
     entry: './src/js/main.js',
     output: {
         path: '/dist',
