@@ -1,4 +1,4 @@
-# Minesweeper game written without in React and Flux.
+# Minesweeper game written in ES6, React and Flux.
 Most of the state is stored in the store. And some state in the game itself. But the grid and the cells are all made stateless by choice.
 
 ## Technologies used
