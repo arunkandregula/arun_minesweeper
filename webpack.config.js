@@ -4,7 +4,7 @@ module.exports = {
     entry: './src/js/main.js',
     output: {
         path: '/dist',
-        publicPath: '/dist',
+        publicPath: '/arun_minesweeper',
         filename: 'bundle.js'
     },
     devServer: {
