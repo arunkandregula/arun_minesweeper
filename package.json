@@ -1,10 +1,11 @@
 {
-  "name": "minesweeper",
+  "name": "arun_minesweeper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack-dev-server"
+    "build": "webpack-dev-server",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.27.3",
     "file-loader": "^0.11.1",
+    "gh-pages": "^0.12.0",
     "image-webpack-loader": "^3.3.0",
     "node-sass": "^4.5.1",
     "sass-loader": "^6.0.3",
