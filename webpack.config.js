@@ -1,4 +1,3 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     context: __dirname,
     entry: './src/js/main.js',
@@ -30,12 +29,5 @@ module.exports = {
                 loaders: ['file-loader']
             }
         ]
-    },
-    plugins: [
-        new CopyWebpackPlugin([
-        {
-            from: '/src/assets/**/*',
-            to: '/assets'
-        }])
-    ]
+    }
 }
