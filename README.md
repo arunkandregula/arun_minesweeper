@@ -11,7 +11,7 @@ Most of the state is stored in the store. And some state in the game itself. But
 
 ## How to play my version of minesweeper
 
-1. MAke sure you have installed git, npm on your machine.
+1. Make sure you have installed git, npm on your machine.
 2. git clone git@github.com:arunkandregula/arun_minesweeper.git
 3. cd arun_minesweeper
 4. npm install
