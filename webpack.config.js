@@ -1,7 +1,7 @@
 module.exports = {
     entry: './src/js/main.js',
     output: {
-        path: '/dist',
+        path: __dirname + '/dist',
         publicPath: '/arun_minesweeper',
         filename: 'bundle.js'
     },

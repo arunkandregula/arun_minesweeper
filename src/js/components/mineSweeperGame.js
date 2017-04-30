@@ -3,7 +3,9 @@ import MineSweeperGrid from './MineSweeperGrid';
 import MineSweeperStore from '../stores/MineSweeperStore';
 import PropTypes from 'prop-types';
 import MineSweeperActions from '../actions/MineSweeperActions';
-import '../../styles/app.sass';
+import '../../styles/small.sass';
+import '../../styles/medium.sass';
+import '../../styles/large.sass';
 import classnames from 'classnames';
 
 let difficulyLevels = {
@@ -175,10 +177,11 @@ class MineSweeperGame extends React.Component {
                 <div className="newGame">
                     <button onClick={this.createNewGame.bind(this, this.state.numRows, this.state.numCols, this.state.numOfHiddenMines)}>New Game</button>
                 </div>
+                <div>
+                    <button onClick={this.cheat.bind(this)} disabled={this.state.isLifeLineActivated} className={lifeLineBtnClassNames}>Use Lifeline</button>
+                </div>
             </div>
-             <div className="actions">
-                <button onClick={this.cheat.bind(this)} disabled={this.state.isLifeLineActivated} className={lifeLineBtnClassNames}>Use Lifeline</button>
-             </div>
+
             <div className={popOverClassNames1} >
                 <div className="msg">Oh no! Bomb blasted. Try playing again. </div>
             </div>

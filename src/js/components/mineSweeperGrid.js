@@ -22,7 +22,11 @@ class MineSweeperGrid extends React.Component {
 
         let rows = gridData.map((eachRow, rIndex)=>{
             let cols = eachRow.map((eachCell, cIndex)=>{
-                return <div key={eachCell.key} className="mineSweeperGrid-col" >
+                let cellStyle = {
+                    width: 100/this.props.numRows + '%',
+                    height: '100%'
+                }
+                return <div key={eachCell.key} className="mineSweeperGrid-col" style={cellStyle}>
                     <Cell
                         count={eachCell.count}
                         hasHiddenMine={eachCell.hasHiddenMine}
@@ -35,7 +39,10 @@ class MineSweeperGrid extends React.Component {
                 </div>;
             });
             let rowKey = "row-" + rIndex;
-            return <div className="mineSweeperGrid-row" key={rowKey}>{cols}</div>;
+            let rowStyle = {
+                    height: 100/this.props.numCols + '%'
+            }
+            return <div className="mineSweeperGrid-row" key={rowKey} style={rowStyle}>{cols}</div>;
         });
         return rows;
     }

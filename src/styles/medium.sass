@@ -1,0 +1,137 @@
+@media screen and (min-width: 500px)
+    html, body
+        height: 100%
+        font-family: tahoma
+        font-size: 22px
+    #app
+        width: 100%
+        margin: 0 auto
+        height: 100%
+        display: flex
+
+    .mineSweeperGame
+        margin: auto
+        height: 100%
+        width: 100%
+        position: relative
+        .score
+            height: 100px
+            text-align: center
+            display: flex
+            justify-content: space-around
+            background-color: #d7d7d7
+            .mines, .face, .time
+                line-height: normal;
+                height: 100%
+            .mines
+                display: flex
+                justify-content: space-around
+                align-items: center
+                .bomb
+                    height: 90%
+                    width: 100px
+                    background-size: 80% 90%
+                    background-image: url('../assets/images/bomb2.jpg')
+                    background-repeat: no-repeat
+
+
+            .face
+                display: flex
+                justify-content: space-around
+                .icon
+                    height: 90px
+                    width: 90px
+                    background-repeat: no-repeat
+                    background-size: 90% 80%
+                    &.normal
+                        background-image: url('../assets/images/smilie_1.jpg')
+                    &.smile
+                        background-image: url('../assets/images/smilie_2.jpg')
+                    &.worry
+                        background-image: url('../assets/images/smilie_3.jpg')
+            .time
+                display: flex
+                .child
+                    margin: auto
+
+        .actions
+            height: 90px
+            text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            background-color: #d7d7d7
+            .disable
+                opacity: 0.2
+                cursor: not-allowed
+            select
+                font-size: 12px
+                height: 20px
+            button
+                font-size: 12px
+                height: 20px
+
+        .mineSweeperGame-popover
+            display: flex
+            position: absolute
+            top: 100px
+            left: 0
+            height: 200px
+            width: 100%
+            text-align: center
+            border: 1px solid red
+            background-color: rgba(255, 0, 0, 0.6);
+            color: black
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            .hide
+                display: none
+            .msg
+                margin: auto
+                color: white
+                font-size: 1.5em
+            .winner
+                background-image: url('../assets/images/winner.jpg')
+                background-repeat: no-repeat
+                height: 100px
+                width: 100px
+
+    .mineSweeperGrid
+        height: 270px
+        border: 1px solid red
+        box-shadow: inset 0 0 1em gold, 0 0 1em red
+        display: flex;
+        flex-direction: column;
+        background-color: white
+        &.mask
+            pointer-events: none
+        .mineSweeperGrid-row
+            display: flex;
+            flex-direction: row;
+            .mineSweeperGrid-col
+                height: 50px
+                width: 50px
+                background-color: white
+                .cell
+                    height: 95%
+                    width: 95%
+                    border: 1px solid black
+                    display: flex
+                    justify-content: space-around
+                    align-items: center
+                    background-color: #d7d7d7
+                    box-shadow: inset 3px 3px  lightgrey, inset -3px -3px  lightgrey
+                    &:hover
+                        box-shadow: inset 0 0 5px black
+                    &.active
+                        box-shadow: 0 0
+                        background-color: none
+                        background-color: white
+                        &.mine
+                            background-image: url('../assets/images/bomb2.jpg')
+                            background-repeat: no-repeat
+                            background-color: transparent
+                            background-size: 100% 90%
+
